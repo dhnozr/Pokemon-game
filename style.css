@@ -52,3 +52,23 @@ body {
 .card:active {
   transform: scale(0.91);
 }
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 5px 10px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.back {
+  backface-visibility: hidden;
+}
+
+.front {
+  transform: rotateY(180deg);
+}
