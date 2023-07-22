@@ -67,11 +67,11 @@ body {
   border-radius: 10px;
 }
 
-.back {
+.back-face {
   backface-visibility: hidden;
 }
 
-.front {
+.front-face {
   transform: rotateY(180deg);
 }
 
