@@ -18,8 +18,6 @@ body {
 }
 
 .game-info {
-  /* transform: translateX(250px);
-  font-size: 30px; */
   width: 650px;
   margin: auto;
   font-size: 30px;
