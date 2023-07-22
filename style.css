@@ -44,3 +44,11 @@ body {
   transform-style: preserve-3d;
   transition: transform 1s ease;
 }
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+.card:active {
+  transform: scale(0.91);
+}
