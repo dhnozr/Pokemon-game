@@ -49,4 +49,15 @@ function resetCardFunc() {
   [firstCard, secondCard] = [null, null];
 }
 
+function resetGame() {
+  score = 0;
+  scoreInfo.textContent = score;
+  playerLivesCount = 5;
+  playerLives.textContent = playerLivesCount;
+  cards.forEach(card => {
+    card.classList.remove('flip');
+    card.style.pointerEvents = 'auto';
+  });
+}
+
 cards.forEach(card => card.addEventListener('click', flipCard));
