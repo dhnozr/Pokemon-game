@@ -25,3 +25,22 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+
+.gameboard {
+  width: 650px;
+  height: 650px;
+  gap: 10px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  perspective: 1000px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s ease;
+}
