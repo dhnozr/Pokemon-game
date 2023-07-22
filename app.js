@@ -1,6 +1,14 @@
 // take all the game card's
 const cards = document.querySelectorAll('.card');
 
+let hasFlipped = false;
+// lock board when were flipping
+let lockBoard = false;
+let firstCard;
+let secondCard;
+let score = 0;
+let playerLivesCount = 5;
+
 function flipCard() {
   if (lockBoard) return;
   if (this === firstCard) return;
