@@ -20,4 +20,28 @@ function flipCard() {
   }
 }
 
+function checkForMatch() {
+  if (firstCard.dataset.info === secondCard.dataset.info) {
+    // it's a match
+    firstCard.style.pointerEvents = 'none';
+    secondCard.style.pointerEvents = 'none';
+    score += 1;
+    scoreInfo.textContent = score;
+    winGame();
+  } else {
+    // not a match
+    // make a time to show cards when flipping
+    lockBoard = true;
+
+    setTimeout(() => {
+      firstCard.classList.remove('flip');
+      secondCard.classList.remove('flip');
+      resetCardFunc();
+    }, 1000);
+    playerLivesCount -= 1;
+    playerLives.textContent = playerLivesCount;
+    endGame();
+  }
+}
+
 cards.forEach(card => card.addEventListener('click', flipCard));
