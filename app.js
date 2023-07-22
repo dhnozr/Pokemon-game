@@ -60,4 +60,18 @@ function resetGame() {
   });
 }
 
+function winGame() {
+  if (score === 8) {
+    setTimeout(() => {
+      overlayEndGame.style.display = 'flex';
+      gameTitle.textContent = 'You won😎 Now you are a pokemon hunter';
+    }, 1000);
+    overlayEndGame.addEventListener('click', () => {
+      overlayEndGame.style.display = 'none';
+      resetGame();
+      resetCardFunc();
+    });
+  }
+}
+
 cards.forEach(card => card.addEventListener('click', flipCard));
