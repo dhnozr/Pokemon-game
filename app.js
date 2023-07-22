@@ -90,4 +90,12 @@ function endGame() {
   });
 }
 
+// shuffle Cards
+function shuffleCards() {
+  cards.forEach(card => {
+    const randomPos = Math.floor(Math.random() * cards.length);
+    card.style.order = randomPos;
+  });
+}
+
 cards.forEach(card => card.addEventListener('click', flipCard));
