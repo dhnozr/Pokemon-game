@@ -74,4 +74,20 @@ function winGame() {
   }
 }
 
+function endGame() {
+  if (playerLivesCount === 0) {
+    setTimeout(() => {
+      overlayEndGame.style.display = 'flex';
+      gameTitle.textContent = `You Lost😢 Restart again the claim your pokemon    `;
+      playerLivesCount = 5;
+      playerLives.textContent = playerLivesCount;
+      resetGame();
+    }, 1000);
+  }
+
+  overlayEndGame.addEventListener('click', () => {
+    overlayEndGame.style.display = 'none';
+  });
+}
+
 cards.forEach(card => card.addEventListener('click', flipCard));
