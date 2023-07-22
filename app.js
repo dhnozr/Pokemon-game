@@ -44,4 +44,9 @@ function checkForMatch() {
   }
 }
 
+function resetCardFunc() {
+  [lockBoard, hasFlipped] = [false, false];
+  [firstCard, secondCard] = [null, null];
+}
+
 cards.forEach(card => card.addEventListener('click', flipCard));
