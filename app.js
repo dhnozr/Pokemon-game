@@ -1,6 +1,24 @@
 // take all the game card's
 const cards = document.querySelectorAll('.card');
 
+// update dom score-info
+const scoreInfo = document.querySelector('.score-info');
+const playerLives = document.querySelector('.playerLife-info');
+
+// first screen settings
+const overlay = document.querySelector('.overlay');
+// end game settings
+const overlayEndGame = document.querySelector('.overlay-endgame');
+const gameTitle = document.querySelector('.title');
+
+function overlayHandler() {
+  overlay.addEventListener('click', () => {
+    overlay.style.display = 'none';
+    shuffleCards();
+  });
+}
+overlayHandler();
+
 let hasFlipped = false;
 // lock board when were flipping
 let lockBoard = false;
