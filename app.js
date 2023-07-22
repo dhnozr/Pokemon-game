@@ -47,7 +47,7 @@ function flipCard() {
 }
 
 function checkForMatch() {
-  if (firstCard.dataset.info === secondCard.dataset.info) {
+  if (firstCard.dataset.img === secondCard.dataset.img) {
     // it's a match
     firstCard.style.pointerEvents = 'none';
     secondCard.style.pointerEvents = 'none';
